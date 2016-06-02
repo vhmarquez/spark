@@ -1,5 +1,5 @@
 {
-  "name": "contact-book",
+  "name": "reach",
   "version": "1.0.0",
   "dependencies": {
     "gulp": "*",
@@ -8,9 +8,7 @@
     "gulp-compass": "*",
     "gulp-minify-css": "*",
     "gulp-uglify": "*",
-    "gulp-concat": "*"
-  },
-  "devDependencies": {
+    "gulp-concat": "*",
     "gulp-imagemin": "^3.0.1"
   }
 }

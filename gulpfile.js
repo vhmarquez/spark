@@ -3,13 +3,13 @@
 // =========================
 
 const	GULP = require('gulp');
-const WATCH = require('gulp-watch');
-const RENAME = require('gulp-rename');
-const SASS = require('gulp-compass');
-const MINCSS = require('gulp-minify-css');
-const JSUGLIFY = require('gulp-uglify');
-const JSCONCAT = require('gulp-concat');
-const IMAGEMIN = require('gulp-imagemin');
+const	WATCH = require('gulp-watch');
+const	RENAME = require('gulp-rename');
+const	SASS = require('gulp-compass');
+const	MINCSS = require('gulp-minify-css');
+const	JSUGLIFY = require('gulp-uglify');
+const	JSCONCAT = require('gulp-concat');
+const	IMAGEMIN = require('gulp-imagemin');
 
 // DEV COMPILE
 ///////////////////////////////////////////////
@@ -51,8 +51,8 @@ GULP.task('sass-prod', function() {
 ///////////////////////////////////////////////
 
 GULP.task('js-vendors', function(){
-	GULP.src(['_source/js/vendors/**/*.js'])
-		.pipe(RENAME({suffix: '.min'}))
+	GULP.src(['_source/js/vendors/*/dist/*.min.js'])
+		.pipe(RENAME({dirname: ''}))
 		.pipe(GULP.dest('_html/_js/vendors'));
 })
 
