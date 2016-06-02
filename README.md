@@ -2,5 +2,5 @@
 
 ### Set up instructions
 
-- Run *npm install* and *bower install* in root
+- Run **npm install** and **bower install** in root
   - This will install gulpjs and bower dependencies
