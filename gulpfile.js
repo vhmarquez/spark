@@ -20,7 +20,6 @@ GULP.task('dev', function() {
 	GULP.watch('_source/assets/**/*', ['imagemin']);
 });
 
-
 // SASS & CSS
 ///////////////////////////////////////////////
 
