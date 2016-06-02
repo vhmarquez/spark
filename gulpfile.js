@@ -54,7 +54,7 @@ GULP.task('js-vendors', function(){
 	GULP.src(['_source/js/vendors/*/dist/*.min.js'])
 		.pipe(RENAME({dirname: ''}))
 		.pipe(GULP.dest('_html/_js/vendors'));
-})
+});
 
 GULP.task('js-dev', function(){
 	GULP.src(['_source/js/**/*.js', '!_source/js/vendors/**/*.js'])
