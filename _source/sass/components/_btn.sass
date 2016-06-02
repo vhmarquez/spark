@@ -1,0 +1,40 @@
+
+// BUTTONS
+////////////////////////////////////////////////
+
+a.btn
+	font-weight: 300
+
+.btn
+	display: inline
+	position: relative
+	margin-bottom: $bsu
+	padding: $hsu $bsu
+	font-size: 12px
+	font-weight: 700
+	text-transform: uppercase
+	text-decoration: none
+	cursor: pointer
+	+transition(all .3s ease-in-out)
+	border-radius: 30px
+
+	&.btn-normal
+		background: $green-lime
+		color: #fff
+
+		&:hover
+			background: $green-lime-light
+
+	&.btn-inactive
+		background: #fff
+		color: $green
+		border: 2px solid $green
+		padding-top: 10px
+		padding-bottom: 10px
+
+	&.btn-active
+		background: $green
+		color: #fff
+
+	+mq(lap)
+		font-size: 16px

@@ -1,0 +1,34 @@
+
+// GRID
+////////////////////////////////////////////////
+
+// default grid behavior
+///////////////////////////////////////
+
+%grid,
+.grid
+	@extend %cf
+	width: 100%
+	margin-left: -$hsu
+
+%grid-item,
+.grid-item
+	position: relative
+	width: 100%
+	padding-left: $bsu
+	float: left
+
+// full grid
+///////////////////////////////////////
+
+%grid-full,
+.grid-full
+	@extend %cf
+	margin-left: 0!important
+	width: 100%
+
+.grid-item-full
+	position: relative
+	width: 100%
+	padding-left: 0!important
+	float: left
