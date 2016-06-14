@@ -31,7 +31,8 @@ GULP.task('sass-dev', function() {
 		}))
 		.pipe(GULP.dest('_source/css'))
 		.pipe(RENAME({suffix: '.min'}))
-		.pipe(GULP.dest('_html/_css'));
+		.pipe(GULP.dest('_html/_css'))
+		.pipe(GULP.dest('_drupal/sites/all/themes/spark/css'));
 });
 
 GULP.task('sass-prod', function() {
@@ -52,13 +53,15 @@ GULP.task('sass-prod', function() {
 GULP.task('js-vendors', function(){
 	GULP.src(['_source/js/vendors/*/dist/*.min.js'])
 		.pipe(RENAME({dirname: ''}))
-		.pipe(GULP.dest('_html/_js/vendors'));
+		.pipe(GULP.dest('_html/_js/vendors'))
+		.pipe(GULP.dest('_drupal/sites/all/themes/spark/js/vendors'));
 });
 
 GULP.task('js-dev', function(){
 	GULP.src(['_source/js/**/*.js', '!_source/js/vendors/**/*.js'])
 		.pipe(JSCONCAT('app.min.js'))
-		.pipe(GULP.dest('_html/_js'));
+		.pipe(GULP.dest('_html/_js'))
+		.pipe(GULP.dest('_drupal/sites/all/themes/spark/js'));
 });
 
 GULP.task('js-prod', function(){

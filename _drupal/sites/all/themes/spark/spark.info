@@ -1,0 +1,12 @@
+name = Spark
+description = Spark Education Management System Theme
+core = 7.x
+
+stylesheets[all][] = css/screen.min.css
+
+scripts[] = js/vendors/html5shiv.min.js
+scripts[] = js/app.min.js
+
+regions[page_top] = Page Top
+regions[content] = Content
+regions[page_bottom] = Page Bottom
