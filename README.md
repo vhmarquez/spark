@@ -1,4 +1,4 @@
-# Reach Starter Structure
+# Spark: Education Management System
 
 ### Set up instructions
 
