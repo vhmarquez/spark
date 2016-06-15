@@ -72,51 +72,28 @@
  * @ingroup themeable
  */
 ?>
+<header id="header" class="header">
+  <span class="icon-menu"></span>
+  <a href="/" id="logo" class="logo">Spark</a>
+</header>
+<main id="app" class="app">
+  <aside id="sidebar" class="sidebar">
+    <nav id="nav" class="nav">
 
-  <div id="page-wrapper">
-    <div id="page">
-
-      <div id="header">
-        <div class="section clearfix">
-
-          <?php// if ($logo): ?>
-            <!-- <a href="<?php //print $front_page; ?>" title="<?php //print t('Home'); ?>" rel="home" id="logo">
-              <img src="<?php //print $logo; ?>" alt="<?php //print t('Home'); ?>" />
-            </a> -->
-          <?php //endif; ?>
-
-          <?php if ($site_name || $site_slogan): ?>
-            <div id="name-and-slogan">
-              <?php if ($site_name): ?>
-                <?php if ($title): ?>
-                  <div id="site-name"><strong>
-                    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-                  </strong></div>
-                <?php else: /* Use h1 when the content title is empty */ ?>
-                  <h1 id="site-name">
-                    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-                  </h1>
-                <?php endif; ?>
-              <?php endif; ?>
-
-              <?php if ($site_slogan): ?>
-                <div id="site-slogan"><?php print $site_slogan; ?></div>
-              <?php endif; ?>
-            </div> <!-- /#name-and-slogan -->
-          <?php endif; ?>
-
-          <?php print render($page['header']); ?>
-
-        </div>
-      </div> <!-- /.section, /#header -->
-
-      <?php print $messages; ?>
-
-      <div id="footer">
-        <div class="section">
-        <?php print render($page['footer']); ?>
-        </div>
-      </div> <!-- /.section, /#footer -->
-
-    </div>
-  </div> <!-- /#page, /#page-wrapper -->
+    </nav>
+  </aside>
+  <?php if ($messages): ?>
+    <section id="system-messages" class="system-messages">
+      <div class="container">
+        <?php print $messages; ?>
+      </div>
+    </section>
+  <?php endif; ?>
+  <?php if ($page['content']): ?>
+    <section id="page-content" class="page-content">
+      <div class="container">
+        <?php print render($page['content']); ?>
+      </div>
+    </section>
+  <?php endif; ?>
+</main>
